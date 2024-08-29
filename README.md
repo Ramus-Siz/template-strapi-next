@@ -1,0 +1,1 @@
+# template-strapi-next
