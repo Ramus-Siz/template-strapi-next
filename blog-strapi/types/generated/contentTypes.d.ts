@@ -419,6 +419,7 @@ export interface ApiPostPost extends Schema.CollectionType {
       'oneToMany',
       'api::comment.comment'
     >;
+    description: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
