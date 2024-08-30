@@ -59,13 +59,22 @@ const PostDetail = () => {
                             </div>
                             
                             <div className='flex items-center gap-2 text-white/40 mt-2'>
-                                <span className='text-sm'>Par <span className='text-white/60'>{`${post.attributes.comments.data[0].attributes.pseudo}`}</span></span>
+                                {post.attributes.comments.data && post.attributes.comments.data.length > 0 && post.attributes.comments.data[0].attributes.pseudo ? (
+                                    <span className='text-sm'>Par <span className='text-white/60'>{`${post.attributes.comments.data[0].attributes.pseudo}`}</span></span>
+                                ) : (
+                                  <span className='text-sm'></span>
+
+                                )}
                                 <span className='text-white/60 text-sm'>{`${post.attributes.comments.data.length} `}<span className='text-white/40'>Commentaires</span></span>
 
                             </div>
                         </div>
+                        {post.attributes.image.data && post.attributes.image.data.length > 0 && post.attributes.image.data[0].attributes.formats.thumbnail.url ? (
+                                <img src={`${BaseUrl()}${post.attributes.image.data[0].attributes.formats.thumbnail.url}`} className="rounded-lg opacity-75 hover:opacity-100 z-0" alt="" />
+                            ) : (
+                                <img src="../../../public/no-image.png" className="rounded-lg w-[250px]" alt="" />
+                            )}
                         
-                        <img src={`${BaseUrl()}${post.attributes.image.data[0].attributes.formats.thumbnail.url}`} className="rounded-lg opacity-75 hover:opacity-100 z-0" alt="" />
                     </li>
                 
                     
