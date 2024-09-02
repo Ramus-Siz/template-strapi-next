@@ -41,7 +41,7 @@ function Posts() {
       <ul className='flex flex-col gap-4 items-center justify-between'>
         {data.data.map(post => (
             <Link key={post.id} href={`/posts/${post.id}`} className=''>
-                 <div  className='flex items-center justify-center ' >
+                 <div  className='flex items-center justify-center overflow-x-auto ' >
                     
                     <li className='flex flex-col-reverse xl:flex-row gap-4 items-center justify-start overscroll-auto'>
                         <div className='xl:w-[700px]'>

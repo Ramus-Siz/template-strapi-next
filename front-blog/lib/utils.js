@@ -10,6 +10,13 @@ export function BaseUrl(){
   return urlBase;
 }
 
+export function homeUrl(){
+  const urlHome="http://localhost:3001";
+  return urlHome;
+}
+
+
+
 
 export function formatDate(isoDate) {
   // Convertir la date ISO en objet Date

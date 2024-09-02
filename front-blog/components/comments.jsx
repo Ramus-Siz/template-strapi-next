@@ -81,7 +81,7 @@ const Comments = ({ postId, comments }) => {
           />
           <button
             type='submit'
-            className='px-3 py-2 rounded bg-accent  hover:bg-accent/60 text-white mt-2 xl:w-[100%]'
+            className='px-3 py-2 rounded bg-accent/30  hover:bg-accent/90 text-white/60 hover:text-white/90 mt-2 xl:w-[100%]'
             disabled={mutation.isLoading}
           >
             {mutation.isLoading ? 'Envoi...' : 'Ajouter un commentaire'}
